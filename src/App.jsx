@@ -1,10 +1,10 @@
-import { Accordion } from "./components";
+import { ColorGenerator } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Accordion />
+      <ColorGenerator />
     </>
   );
 }
