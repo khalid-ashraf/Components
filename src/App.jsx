@@ -1,10 +1,10 @@
-import { ColorGenerator } from "./components";
+import { StarRating } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ColorGenerator />
+      <StarRating />
     </>
   );
 }
