@@ -28,8 +28,8 @@ export default function ColorGenerator() {
     const formData = new FormData(e.target);
     let selected = formData.get("color-type");
 
-    if (selected === "hex") setColor(createRandomHexColor());
-    if (selected === "rgb") setColor(createRandomRgbColor());
+    if (selected === "hex") return setColor(createRandomHexColor());
+    if (selected === "rgb") return setColor(createRandomRgbColor());
   };
 
   return (
