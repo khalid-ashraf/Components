@@ -32,7 +32,6 @@ export default function ImageSlider() {
           const res = await fetch(URL);
           const data = await res.json();
 
-          console.log(data);
           setImages(data);
         } catch (error) {
           throw new Error("error: ", error);
@@ -64,7 +63,6 @@ export default function ImageSlider() {
           />
           {images.map((image) => {
             if (currentSlide === +image.id) {
-              console.log(image);
               return (
                 <>
                   <img
