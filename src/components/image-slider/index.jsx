@@ -25,6 +25,7 @@ export default function ImageSlider() {
     setCurrentSlide(index);
   };
 
+  // Effect to load images list from url
   useEffect(() => {
     if (URL !== "") {
       (async () => {
@@ -40,6 +41,7 @@ export default function ImageSlider() {
     }
   }, [URL]);
 
+  // Effect to automatically change images
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => {
