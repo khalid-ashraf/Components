@@ -1,0 +1,57 @@
+.imageSlider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 500px;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 500px;
+  height: 450px;
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 1rem;
+  color: white;
+}
+
+.arrowLeft {
+  left: 1rem;
+}
+
+.arrowRight {
+  right: 1rem;
+}
+
+.circleIndicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  gap: 5px;
+}
+
+.currentIndicator {
+  background-color: white;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.current {
+  background-color: red;
+}
