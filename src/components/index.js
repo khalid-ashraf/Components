@@ -4,6 +4,7 @@ import ImageSlider from "./image-slider";
 import LoadMoreButton from "./loadmore-button";
 import QRCodeGenerator from "./qrcode-generator";
 import StarRating from "./star-rating";
+import ThemeSwitch from "./theme-switch";
 import TreeView from "./tree-view";
 
 export {
@@ -13,5 +14,6 @@ export {
   LoadMoreButton,
   QRCodeGenerator,
   StarRating,
+  ThemeSwitch,
   TreeView,
 };
