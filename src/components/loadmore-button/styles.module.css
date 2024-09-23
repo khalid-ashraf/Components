@@ -1,0 +1,23 @@
+.productsContainer {
+  display: flex;
+  width: 80vw;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* overflow: scroll; */
+}
+
+.productCard {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border: 2px solid white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+}

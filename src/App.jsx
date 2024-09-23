@@ -1,10 +1,10 @@
-import { ImageSlider } from "./components";
+import { LoadMoreButton } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ImageSlider />
+      <LoadMoreButton />
     </>
   );
 }
