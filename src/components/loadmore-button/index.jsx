@@ -31,23 +31,25 @@ export default function LoadMoreButton() {
     return () => {};
   }, [loadMore]);
 
-  if (loading) return <p>Loading...</p>;
-
   return (
     <div>
       <h1>Load More Products</h1>
       <div className={styles.productsContainer}>
-        {products.map((product, index) => (
-          <div className={styles.productCard} key={index}>
-            <h3>{product.title}</h3>
-            <img
-              className={styles.image}
-              src={product.images[0]}
-              alt={product.title}
-            />
-            <p>{product.price}</p>
-          </div>
-        ))}
+        {loading && loadMore === 0 ? (
+          <p>Loading...</p>
+        ) : (
+          products.map((product, index) => (
+            <div className={styles.productCard} key={index}>
+              <h3>{product.title}</h3>
+              <img
+                className={styles.image}
+                src={product.images[0]}
+                alt={product.title}
+              />
+              <p>{product.price}</p>
+            </div>
+          ))
+        )}
       </div>
       <button onClick={() => setLoadMore((prev) => prev + 1)}>Load More</button>
     </div>
