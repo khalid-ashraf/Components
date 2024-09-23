@@ -9,7 +9,6 @@ export default function QRCodeGenerator() {
   const handleGenerateQR = (e) => {
     e.preventDefault();
 
-    console.log(inputRef.current?.value);
     setValue(inputRef.current.value);
   };
 
