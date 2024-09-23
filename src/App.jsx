@@ -1,10 +1,10 @@
-import { TreeView } from "./components";
+import { QRCodeGenerator } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <TreeView />
+      <QRCodeGenerator />
     </>
   );
 }
