@@ -1,0 +1,23 @@
+.productsContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.progressBarConatiner {
+  background-color: white;
+  height: 20px;
+  width: 100%;
+  display: flex;
+
+  align-items: start;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.currentProgressBar {
+  height: 100%;
+  background-color: green;
+}

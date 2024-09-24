@@ -1,10 +1,10 @@
-import { ThemeSwitch } from "./components";
+import { ScrollIndicator } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ThemeSwitch />
+      <ScrollIndicator />
     </>
   );
 }
