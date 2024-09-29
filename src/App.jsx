@@ -1,10 +1,10 @@
-import { ScrollIndicator } from "./components";
+import { AutoComplete } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ScrollIndicator />
+      <AutoComplete />
     </>
   );
 }

@@ -1,0 +1,5 @@
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
