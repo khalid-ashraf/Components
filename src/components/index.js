@@ -9,6 +9,7 @@ import ScrollIndicator from "./scroll-indicator";
 import StarRating from "./star-rating";
 import Tabs from "./tabs";
 import ThemeSwitch from "./theme-switch";
+import TodoList from "./todo-list";
 import TreeView from "./tree-view";
 
 export {
@@ -23,5 +24,6 @@ export {
   StarRating,
   Tabs,
   ThemeSwitch,
+  TodoList,
   TreeView,
 };

@@ -1,10 +1,10 @@
-import { AutoComplete } from "./components";
+import { TodoList } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <AutoComplete />
+      <TodoList />
     </>
   );
 }
