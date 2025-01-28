@@ -39,6 +39,7 @@ export default function CircleClick() {
       <button
         className={styles.button}
         onClick={handleUndo}
+        disabled={points.length ? false : true}
       >
         Undo
       </button>
@@ -46,6 +47,7 @@ export default function CircleClick() {
       <button
         className={styles.button}
         onClick={handleReset}
+        disabled={points.length ? false : true}
       >
         Reset
       </button>
