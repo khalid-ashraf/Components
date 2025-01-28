@@ -1,0 +1,10 @@
+.linesContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+}

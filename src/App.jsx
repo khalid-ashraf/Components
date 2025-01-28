@@ -1,10 +1,10 @@
-import { TodoList } from "./components";
+import { CircleClick } from "./components";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <TodoList />
+      <CircleClick />
     </>
   );
 }

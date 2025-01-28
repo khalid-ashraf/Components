@@ -1,0 +1,115 @@
+    // Function to validate the form
+    function validateForm() {
+        const name = document.getElementById('name').value;
+        const mobile = document.getElementById('mobile').value;
+        const email = document.getElementById('email').value;
+
+        // Validate Name
+        if (!validateName(name)) {
+            showError("Name should contain only letters and spaces, and be 1-20 characters long.");
+            return false;
+        }
+
+        // Validate Mobile
+        if (!validateMobile(mobile)) {
+            showError("Mobile number should contain 10 digits only.");
+            return false;
+        }
+
+        // Validate Email
+        if (!validateEmail(email)) {
+            showError("Invalid email format.");
+            return false;
+        }
+
+        // If all validations pass
+        hideError();
+        addContact(name, mobile, email);
+        resetForm();
+        return true;
+    }
+
+    // Helper validation functions
+    function validateName(name) {
+        return /^[A-Za-z\s]{1,20}$/.test(name);
+    }
+
+    function validateMobile(mobile) {
+        return /^\d{10}$/.test(mobile);
+    }
+
+    function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z][a-zA-Z0-9.]{1,9}@[a-zA-Z]{2,20}\.[a-zA-Z]{2,10}$/;
+        return emailRegex.test(email);
+    }
+
+    // Function to show error message
+    function showError(message) {
+        const errorDiv = document.getElementById('error');
+        errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
+    }
+
+    // Function to hide error message
+    function hideError() {
+        document.getElementById('error').style.display = 'none';
+    }
+
+    // Function to reset the form
+    function resetForm() {
+        document.getElementById('name').value = '';
+        document.getElementById('mobile').value = '';
+        document.getElementById('email').value = '';
+    }
+
+    // Array to store contacts
+    let contacts = window.ContactsList;
+
+    // Function to add a contact
+    function addContact(name, mobile, email) {
+        contacts.push({ name, mobile, email });
+        updateContactsTable();
+    }
+
+    // Function to update the contacts table
+    function updateContactsTable() {
+        const tableBody = document.querySelector('#summaryTable tbody');
+        tableBody.innerHTML = '';
+        
+        contacts.forEach(contact => {
+            const row = tableBody.insertRow();
+            row.insertCell(0).textContent = contact.name;
+            row.insertCell(1).textContent = contact.mobile;
+            row.insertCell(2).textContent = contact.email;
+        });
+    }
+
+    // Function to search contacts by mobile number
+    function searchContact() {
+        const searchMobile = document.getElementById('search').value;
+        const filteredContacts = contacts.filter(contact => contact.mobile.includes(searchMobile));
+        
+        const tableBody = document.querySelector('#summaryTable tbody');
+        tableBody.innerHTML = '';
+        
+        filteredContacts.forEach(contact => {
+            const row = tableBody.insertRow();
+            row.insertCell(0).textContent = contact.name;
+            row.insertCell(1).textContent = contact.mobile;
+            row.insertCell(2).textContent = contact.email;
+        });
+    }
+
+    // Event listener for form submission
+    document.getElementById('submit').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (validateForm()) {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            addContact(name, mobile, email);
+        }
+    });
+
+    // Event listener for search input
+    document.getElementById('search').addEventListener('input', searchContact);

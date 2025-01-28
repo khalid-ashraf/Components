@@ -1,6 +1,8 @@
 import Accordion from "./accordion/accordion";
 import AutoComplete from "./autocomplete";
 import ColorGenerator from "./color-generator";
+import CircleClick from "./circle-click";
+import GroceryStore from "./grocery-store";
 import ImageSlider from "./image-slider";
 import LoadMoreButton from "./loadmore-button";
 import Modal from "./modal";
@@ -16,6 +18,8 @@ export {
   Accordion,
   AutoComplete,
   ColorGenerator,
+  CircleClick,
+  GroceryStore,
   ImageSlider,
   LoadMoreButton,
   Modal,
